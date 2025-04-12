@@ -1,7 +1,7 @@
 {
-    "title": "Título del cuestionario",
+    "title": "Ofimática 1",
     "description": "Selecciona la opción correcta.",
-    "subject": "Matematicas",
+    "subject": "Ofimática",
     "type":"single-chice",
     "questions": [
         {

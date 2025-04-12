@@ -1,0 +1,18 @@
+{
+    "subjects": [
+        {
+            "folderName": "Ofimatica",
+            "quizzes" : [
+                "Ofimatica1",
+                "Ofimatica2",
+                "Ofimatica3"
+            ]
+        },
+        {
+            "folderName": "sample-course",
+            "quizzes" : [
+                "sample-quiz-single"
+            ]
+        }
+    ]
+}

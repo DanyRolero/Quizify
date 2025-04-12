@@ -7,12 +7,44 @@
     <title>Quiz</title>
     <script src="script.js" defer></script>
 </head>
+
 <body>
+    <!-- ------------------------------------------------------------------------------------ -->
+    <section id="quiz-selector-container">
+        <h3>Selecciona el curso y el test para comenzar</h3>
+        <section>
+            <label for="course">Curso:</label>
+            <!-- Añadir los nombres de las carpetas -->
+            <select id="subject-selector" name="course" disabled>
+                <option>Selecciona una materia</option>
+            </select>
+
+            <label for="test">Test:</label>
+
+            <!-- Cargar los nombres de los test -->
+            <select id="quiz-selector" name="test" disabled>
+                <option value="1">Test 1</option>
+            </select>
+
+            <button id="load-quiz-button" class="btn" disabled>Cargar test</button>
+        </section>
+    </section>
     <main>
         <hgroup>
             <h1 id="title-quiz"></h1>
             <h2 id="description-quiz"></h2>
         </hgroup>
+
+        <!-- Generara las preguntas a partir del test cargado -->
+        <section id="quiz-container">
+        
+        </section>
+        <section style="display: none">
+            <button id="submit-quiz" class="btn">Resolver</button>
+            <button id="restart-quiz" class="btn">Reintentar</button>
+            <button id="next-quiz" class="btn">Realizar otro test</button>
+        </section>
+
     </main>
 </body>
 </html>
