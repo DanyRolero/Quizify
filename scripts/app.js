@@ -1,7 +1,4 @@
-//Cargar json
-let coursePath = 'courses/sample-course/';
-let quizName = 'sample-quiz-single.json';
-let path = coursePath + quizName;
+let path = '';
 let quizRoutes = {};
 let quiz = {}
 
@@ -13,7 +10,7 @@ document.getElementById('load-quiz-button').addEventListener('click', () => {
     let selectedSubject = subjectSelector.value;
     let selectedQuiz = quizSelector.value;
 
-    path = `courses/${selectedSubject}/${selectedQuiz}.json`;
+    path = `scripts/data/courses/${selectedSubject}/${selectedQuiz}.json`;
     loadQuiz(path);
 });
 
@@ -72,7 +69,7 @@ function setTitlePage() {
 
 //-------------------------------------------------------------------------------
 function loadQuizRoutes() {
-    fetch('courses/quizRoutes.json')
+    fetch('scripts/data/courses/quizRoutes.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Error en la respuesta: ${response.statusText}`);
