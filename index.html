@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
-    <script src="scripts/mediator_pattern.js" defer></script>
+    <script src="scripts/core/Mediator.js" defer></script>
+    <script src="scripts/components/QuizRouterLoader.js" defer></script>
+    <script src="scripts/components/QuizLoader.js" defer></script>
     <script src="scripts/app.js" defer></script>
 </head>
 
@@ -40,8 +42,9 @@
         <section id="quiz-container">
         
         </section>
+        
         <section style="display: none">
-            <button id="submit-quiz" class="btn">Resolver</button>
+            <button id="submit-quiz" class="btn">Corregir</button>
             <button id="restart-quiz" class="btn">Reintentar</button>
             <button id="next-quiz" class="btn">Realizar otro test</button>
         </section>

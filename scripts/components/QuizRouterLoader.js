@@ -1,23 +1,23 @@
 class QuizRouterLoader {
-    constructor(pathQuizRouterJSON, mediator) {
-        this.pathQuizRouterJSON = pathQuizRouterJSON;
-        this.quizRoutesData = null;
+    constructor(path, mediator) {
+        this.path = path;
+        this.routerData = null;
         this.mediator = mediator;
-        //"scripts/data/courses/quizRoutes.json"    
     }
 
     //-------------------------------------------------------------------------------
-    loadQuizRoutes() {
-        fetch(this.pathQuizRouterJSON)
+    load() {
+        fetch(this.path)
             .then((response) => {
                 if (!response.ok) {
-                    throw new Error(`Error path on load quiz router: ${response.statusText}`);
+                    throw new Error(`Error on load json: ${response.statusText}`);
                 }
                 return response.json();
             })
             .then((data) => {
-                this.quizRoutesData = data;
+                this.routerData = data;
                 this.mediator.publish("quizRouterLoaded", data);
+                console.log("Quiz router loaded:", data);
             });
     }
 }

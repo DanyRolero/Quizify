@@ -1,3 +1,15 @@
+let quizRouterPath = 'scripts/data/courses/quizRoutes.json';
+let quizSamplePath = 'scripts/data/courses/sample-course/sample-quiz-single.json';
+
+let mediator = new Mediator();
+let quizRouterLoader = new QuizRouterLoader(quizRouterPath, mediator);
+let quizLoader = new QuizLoader(mediator);
+
+mediator.subcribe("quizRouterLoaded", quizLoader, quizLoader.load.bind(quizLoader, quizSamplePath));
+
+quizRouterLoader.load();
+
+/*
 let path = '';
 let quizRoutes = {};
 let quiz = {}
@@ -35,22 +47,6 @@ function loadQuiz(path) {
             setTitlePage();
         });
 }
-
-//-------------------------------------------------------------------------------
-/*
-    - Seleccionar curso
-    - Seleccionar test
-
-    - Cargar titulo y descripción del test
-
-    - Dependiendo del tipo de test, las preguntas se renderizará de una forma u otra.
-    - Para test single choice
-    - Para test multiple choice
-    - Para test open question
-    - Para test de respuesta corta
-    - ...
-
-*/
 
 //-------------------------------------------------------------------------------
 function renderTitle() {
@@ -122,3 +118,4 @@ function renderQuizzesOptions() {
         quizSelector.appendChild(option);
     });
 }
+*/

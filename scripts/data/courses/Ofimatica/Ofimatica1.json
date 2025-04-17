@@ -2,7 +2,7 @@
     "title": "Ofimática 1",
     "description": "Selecciona la opción correcta.",
     "subject": "Ofimática",
-    "type":"single-chice",
+    "type":"single-choice",
     "questions": [
         {
             "question" : "Pregunta de ejemplo",
