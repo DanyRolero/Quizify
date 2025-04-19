@@ -24,7 +24,7 @@ class Mediator {
     publish(channel, ...args) {
       if (!this.channels[channel]) return;
       this.channels[channel].forEach((subscription) => {
-          subscription.callback.apply(subscription.contexto, args);
+          subscription.callback.apply(subscription.context, args);
       });
     }
   }

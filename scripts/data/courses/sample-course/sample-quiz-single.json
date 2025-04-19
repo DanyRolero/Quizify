@@ -2,7 +2,7 @@
     "title": "Título del cuestionario",
     "description": "Selecciona la opción correcta.",
     "subject": "Matematicas",
-    "type":"single-chice",
+    "type":"single-choice",
     "questions": [
         {
             "question" : "Pregunta de ejemplo",

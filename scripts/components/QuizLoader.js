@@ -16,8 +16,9 @@ class QuizLoader {
             })
             .then(data => {
                 this.quizData = data;
-                console.log("Quiz loaded:", data);
+                //console.log("Quiz loaded:", data);
                 this.mediator.publish("quizLoaded", data);
+                return data;
             });
     }
 }

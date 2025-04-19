@@ -7,7 +7,10 @@
     <title>Quiz</title>
     <script src="scripts/core/Mediator.js" defer></script>
     <script src="scripts/components/QuizRouterLoader.js" defer></script>
+    <script src="scripts/components/SingleChoiceQuizRenderer.js"></script>
+    <script src="scripts/components/SingleChoiceQuizCorrector.js"></script>
     <script src="scripts/components/QuizLoader.js" defer></script>
+    <script src="scripts/components/Quiz.js" defer></script>
     <script src="scripts/app.js" defer></script>
 </head>
 
@@ -39,9 +42,7 @@
         </hgroup>
 
         <!-- Generara las preguntas a partir del test cargado -->
-        <section id="quiz-container">
-        
-        </section>
+        <section id="quiz-container"></section>
         
         <section style="display: none">
             <button id="submit-quiz" class="btn">Corregir</button>

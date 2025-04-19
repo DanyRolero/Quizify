@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <!-- Incluir script de corrección y script de cargar y guardar resultados -->
+    
+</head>
+
+<body>
+    <!-- ------------------------------------------------------------------------------------ -->
+
+    <main>
+        <hgroup>
+            <h1 id="quiz-title">Ofimática - Introucción al ordenador hardware y software</h1>
+            <h2 id="quiz-description">Selecciona la opción correcta</h2>
+        </hgroup>
+
+        <!-- Generara las preguntas a partir del test cargado -->
+        <section id="quiz-container">
+            <form id="quizForm" action="">
+                <!-- ------------------------------------------------------------------ -->
+                <div class="question" data-question="1">
+                    <p>1. ¿Cuáles son los tipos de periféricos?</p>
+                    <p><label><input type="radio" name="q1" value="0"> a) CPU, Memoria y tarjeta gráfica 3D.</label></p>
+                    <p><label><input type="radio" name="q1" value="1"> b) CPU, Memoria y los Dispositivos de entrada/salida.</label></p>
+                    <p><label><input type="radio" name="q1" value="2"> c) Dispositivos de entrada y salida, dispositivos de almacenamiento y
+                        dispositivos multimedia.</label></p>
+                    <p><label><input type="radio" name="q1" value="3"> d) CPU y los dispositivos de multimedia.</label></p>
+                </div>
+
+
+            </form>
+        </section>
+        
+        <section style="display: none">
+            <button id="submit-quiz" class="btn">Corregir</button>
+            <button id="restart-quiz" class="btn">Reintentar</button>
+            <button id="next-quiz" class="btn">Realizar otro test</button>
+        </section>
+
+    </main>
+</body>
+</html>

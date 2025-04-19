@@ -17,7 +17,7 @@ class QuizRouterLoader {
             .then((data) => {
                 this.routerData = data;
                 this.mediator.publish("quizRouterLoaded", data);
-                console.log("Quiz router loaded:", data);
+                //console.log("Quiz router loaded:", data);
             });
     }
 }

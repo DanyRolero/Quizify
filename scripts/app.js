@@ -1,11 +1,24 @@
 let quizRouterPath = 'scripts/data/courses/quizRoutes.json';
-let quizSamplePath = 'scripts/data/courses/sample-course/sample-quiz-single.json';
+let quizSamplePath = 'scripts/data/courses/Ofimatica/Ofimatica1.json';
 
 let mediator = new Mediator();
 let quizRouterLoader = new QuizRouterLoader(quizRouterPath, mediator);
 let quizLoader = new QuizLoader(mediator);
 
-mediator.subcribe("quizRouterLoaded", quizLoader, quizLoader.load.bind(quizLoader, quizSamplePath));
+var quizData;
+var quiz;
+
+//-------------------------------------------------------------------------------
+mediator.subcribe("quizRouterLoaded", quizRouterLoader, () => {
+    quizLoader.load(quizSamplePath);
+});
+
+//-------------------------------------------------------------------------------
+mediator.subcribe("quizLoaded", quizLoader, () => { 
+    quiz = new Quiz(quizLoader.quizData);
+    quiz.render();
+});
+
 
 quizRouterLoader.load();
 

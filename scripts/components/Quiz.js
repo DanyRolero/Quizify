@@ -1,10 +1,5 @@
 class Quiz {
-    contructor(quizData) {
-        this.initialize(quizData)
-    }
-
-    //-------------------------------------------------------------------------------
-    initialize(quizData) {
+    constructor(quizData) {
         if (!quizData) throw new Error("Quiz - constructor: quizData is required");
 
         this.quizData = quizData;
@@ -16,9 +11,8 @@ class Quiz {
     }
 
     //-------------------------------------------------------------------------------
-    setRenderder() {
-
-        switch (this.quizType) {
+    setRenderder(quizType) {
+        switch (quizType) {
             case "single-choice": return new SingleChoiceQuizRenderer(this.quizData);
             case "multiple-choice": return MultipleChoiceQuizRenderer(this.quizData);
             case "true-false": return new TrueFalseQuizRenderer(this.quizData);
@@ -34,9 +28,9 @@ class Quiz {
     }
 
     //-------------------------------------------------------------------------------
-    setCorrector() {
+    setCorrector(quizType) {
 
-        switch (this.quizType) {
+        switch (quizType) {
             case "single-choice": return new SingleChoiceQuizCorrector(this.quizData);
             case "multiple-choice": return MultipleChoiceQuizCorrector(this.quizData);
             case "true-false": return new TrueFalseQuizCorrector(this.quizData);
