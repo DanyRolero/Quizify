@@ -5,7 +5,10 @@ class Quiz {
         this.quizData = quizData;
         this.quizTypeRenderer = this.setRenderder(quizData.type);
         this.quizTypeCorrector = this.setCorrector(quizData.type);
+        this.quizElement = document.getElementById("quiz-form");
 
+        this.isCompleted = false;
+        this.isRedered = false;
         this.isCorrected = false;
         this.result = 0;
     }

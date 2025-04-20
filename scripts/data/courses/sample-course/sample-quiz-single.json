@@ -24,6 +24,28 @@
                     "isCorrect": false
                 }
             ]
+        },
+
+        {
+            "question" : "Pregunta de ejemplo 2",
+            "options": [
+                {
+                    "option": "option1",
+                    "isCorrect": true
+                },
+                {
+                    "option": "option2",
+                    "isCorrect": false
+                },
+                {
+                    "option": "option3",
+                    "isCorrect": false
+                },
+                {
+                    "option": "option4",
+                    "isCorrect": false
+                }
+            ]
         }
     ]
 }

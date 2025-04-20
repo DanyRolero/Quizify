@@ -2,26 +2,74 @@
     "title": "Ofimática 1",
     "description": "Selecciona la opción correcta.",
     "subject": "Ofimática",
-    "type":"single-choice",
+    "type": "single-choice",
+    "corrects" : [0,1,2,3,2,0,1,2,3,0],
     "questions": [
         {
-            "question" : "Pregunta de ejemplo",
+            "question": "¿Cuáles son los tipos de periféricos?",
             "options": [
                 {
-                    "option": "option1",
-                    "isCorrect": true
+                    "option": "CPU, Memoria y tarjeta gráfica 3D."
                 },
                 {
-                    "option": "option2",
-                    "isCorrect": false
+                    "option": "CPU, Memoria y los Dispositivos de entrada/salida."
                 },
                 {
-                    "option": "option3",
-                    "isCorrect": false
+                    "option": "Dispositivos de entrada y salida, dispositivos de almacenamiento y dispositivos multimedia."
                 },
                 {
-                    "option": "option4",
-                    "isCorrect": false
+                    "option": "CPU y los dispositivos de multimedia."
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es la CPU?",
+            "options": [
+                {
+                    "option": "Es la memoria que utiliza el sistema."
+                },
+                {
+                    "option": "Es un dispositivo de almacenamiento."
+                },
+                {
+                    "option": "Es un componente de hardware complementario."
+                },
+                {
+                    "option": "Es el núcleo del sistema que lleva a cabo las operaciones necesarias en él."
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el hardware básico indispensable para que un equipo pueda funcionar?",
+            "options": [
+                {
+                    "option": "CPU, Memoria y tarjeta gráfica 3D."
+                },
+                {
+                    "option": "CPU, Memoria y los Dispositivos de entrada/salida."
+                },
+                {
+                    "option": "Tarjeta de red, Memoria y los Dispositivos de entrada/salida."
+                },
+                {
+                    "option": "CPU, Grabadora de DVD y los Dispositivos de entrada/salida."
+                }
+            ]
+        },
+        {
+            "question": "La arquitectura de un equipo informático básico:",
+            "options": [
+                {
+                    "option": "Se basa en la arquitectura de Von Newmann."
+                },
+                {
+                    "option": "Ha sufrido excesivas modificaciones desde su concepción original."
+                },
+                {
+                    "option": "Se basa en la arquitectura de Von Newmann aunque ha sufrido excesivas modificaciones desde su concepción original."
+                },
+                {
+                    "option": "Está formada por cinco componentes."
                 }
             ]
         }

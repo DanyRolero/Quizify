@@ -1,35 +1,23 @@
 class SingleChoiceQuizRenderer {
     constructor(quizData) {
         this.quizData = quizData;
-        this.quizElementContainer = document.getElementById("quiz-container");
+        this.quizFormElement = document.getElementById("quiz-form");
     }
 
     //-------------------------------------------------------------------------------
     render() {
-        
-        let quizFormElement = this._createQuizFormElement();
-        this.quizElementContainer.appendChild(quizFormElement);
+        for (let i = 0; i < this.quizData.questions.length; i++) {
+            let questionElement = this._createQuestionElement(i);
+            this.quizFormElement.appendChild(questionElement);
 
-        let question = this._createQuestionElement(0);
-        quizFormElement.appendChild(question);
-        
-        let questionTextElement = this._createQuestionTextElement(0);
-        question.appendChild(questionTextElement);
+            let questionTextElement = this._createQuestionTextElement(i);
+            questionElement.appendChild(questionTextElement);
 
-        for (let i = 0; i < this.quizData.questions[0].options.length; i++) {
-            let answerOptionElement = this._createAnswerOptionElement(0, i);
-            question.appendChild(answerOptionElement);
+            for (let j = 0; j < this.quizData.questions[i].options.length; j++) {
+                let answerOptionElement = this._createAnswerOptionElement(i, j);
+                questionElement.appendChild(answerOptionElement);
+            }
         }
-
-    }
-
-    //-------------------------------------------------------------------------------
-    _createQuizFormElement() {
-        let quizFormElement = document.createElement("form");
-        quizFormElement.id = "quiz-form";
-        quizFormElement.className = "quiz-form";
-
-        return quizFormElement;
     }
 
     //-------------------------------------------------------------------------------
